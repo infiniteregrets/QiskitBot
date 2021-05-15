@@ -1,0 +1,6 @@
+Dockerfile
+loginfo.log
+Pipfile
+Pipfile.lock 
+deploy.sh
+docker-compose.yml

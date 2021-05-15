@@ -1,0 +1,45 @@
+{
+    "defaultAction": "SCMP_ACT_ALLOW",
+    "architectures": [
+        "SCMP_ARCH_X86_64",
+        "SCMP_ARCH_X86",
+        "SCMP_ARCH_X32"
+    ],
+    "syscalls": [
+        {
+            "name": "chmod",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        },
+        {
+            "name": "chown",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        },
+        {
+            "name": "chown32",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        },
+        {
+            "name": "mkdir",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        },
+        {
+            "name": "mknod",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        },
+        {
+            "name": "brk",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        },
+        {
+            "name": "getgid",
+            "action": "SCMP_ACT_ERRNO",
+            "args": []
+        }
+    ]
+}
