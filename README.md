@@ -1,6 +1,6 @@
 # QiskitBot
 
-A discord bot that allows you to execute Quantum Circuits, search the Qiskit Documentation, and search the Quantum Computing StackExchange. 
+A discord bot that allows you to execute Quantum Circuits, look up the Qiskit Documentation, and search the Quantum Computing StackExchange. 
 
 ## Installation
 
@@ -18,6 +18,9 @@ On MacOs with deploy.sh
 ```
 zsh deploy.sh
 ```
+## Disclaimer
+
+Builds might fail on your machine. This is still under testing and there is a lot that needs to be fixed with the way the code is structured. Once everything is smooth, I will add docstrings and comments wherever neccessary (: 
 
 ## Architecture of the sandbox (running untrusted code)
 ### Goal
