@@ -30,8 +30,23 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock ...
 I used podman inside of docker, which is a daemonless container engine used for developing, managing, and running OCI Containers. Podman is used with tools like Buildah and Skopeo, which not only makes managing images and containers easy but in my opinion much more powerful than docker!
 
 ### Usage
+```
+<@Qiskit>asciicircuit \`\`\` <codeblock> \`\`\`
+```
 ![](assets/asciicircuit.png)
+```
+<@Qiskit>mplcircuit \`\`\` <codeblock> \`\`\`
+```
 ![](assets/circuit.png)
+```
+<@Qiskit>docs <searchitem> 
+```
 ![](assets/docs.png)
+```
+<@Qiskit>mplplot  \`\`\` <codeblock> \`\`\`
+```
 ![](assets/plot.png)
+```
+<@Qiskit>query <search criteria> \`\`\` <codeblock> \`\`\`
+```
 ![](assets/stackexchange.png)
