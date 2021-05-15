@@ -2,8 +2,8 @@
 
 A discord bot that allows you to execute [Quantum Circuits](https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.html), look up the [IBMQ Qiskit's Documentation](https://qiskit.org/documentation/), and search questions on the [Quantum Computing StackExchange](https://quantumcomputing.stackexchange.com/) 
 
-![](assets/qiskit-community.png)
-:two_hearts: Qiskit
+![](assets/qiskit-community.png)\
+:two_hearts: Qiskit Community 
 
 This project is not affiliated with IBM in any way. But I would like to thank Brian Ingmanson (Education Community Manager at IBM) for being so encouraging and supportive towards this little project!
 
