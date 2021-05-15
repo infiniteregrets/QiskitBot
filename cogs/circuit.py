@@ -21,7 +21,10 @@ class Sandbox:
         return output 
     def __exit__(self, *args, **kwargs):
         subprocess.run(f'podman container stop -l && podman container rm -l', shell=True, capture_output=True)
-
+    def checkpoint(self):
+        subprocess.run(f'podman checkpoint --cgroup-manager="cgroupfs" {self.id}', shell=True, capture_output=True)
+    def restore(self):
+        subprocess.run(f'podman restore --cgroup-manager="cgroupfs" {self.id}', shell=True, capture_output=True)
 
 
 class Circuit(commands.Cog):
