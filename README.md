@@ -1,6 +1,6 @@
 # QiskitBot
 
-A discord bot that allows you to execute Quantum Circuits, look up the Qiskit Documentation, and search the Quantum Computing StackExchange. 
+A discord bot that allows you to execute (Quantum Circuits)[https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.html], look up the (IBMQ Qiskit's Documentation)[https://qiskit.org/documentation/], and search questions on the (Quantum Computing StackExchange)[https://quantumcomputing.stackexchange.com/] 
 
 ## Installation
 
