@@ -20,7 +20,7 @@ zsh deploy.sh
 ```
 ## Disclaimer
 
-Builds might fail on your machine. This is still under testing and there is a lot that needs to be fixed with the way the code is structured. Once everything is smooth, I will add docstrings and comments wherever neccessary (: 
+Builds might fail on your machine. This is still under testing and there is a lot that needs to be fixed with the way the code is structured. Once everything is smooth, I will add docstrings and comments wherever neccessary. 
 
 ## Architecture of the sandbox (running untrusted code)
 ### Goal
@@ -32,7 +32,12 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock ...
 ```
 I used podman inside of docker, which is a daemonless container engine used for developing, managing, and running OCI Containers. Podman is used with tools like Buildah and Skopeo, which not only makes managing images and containers easy but in my opinion much more powerful than docker!
 
-### Usage
+### Initial Idea - Using NsJail With Podman Containers
+To use podman use podman inside docker you need to use the `--privileged` while running your container. This works just fine, but the problem arises when the capabilities of podman and docker don't match. This means you can't run privileged podman containers inside of a docker container as required by NsJail. 
+`"CAP_PERFMON","CAP_BPF", "CAP_CHECKPOINT_RESTORE"` are not supported by docker. 
+See issue [#10282 on containers/podman](https://github.com/containers/podman/issues/10282)
+
+## Usage
 ```
 <@Qiskit>asciicircuit \`\`\` <codeblock> \`\`\`
 ```
