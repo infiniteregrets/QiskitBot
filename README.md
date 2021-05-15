@@ -1,6 +1,11 @@
 # QiskitBot
 
-A discord bot that allows you to execute (Quantum Circuits)[https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.html], look up the (IBMQ Qiskit's Documentation)[https://qiskit.org/documentation/], and search questions on the (Quantum Computing StackExchange)[https://quantumcomputing.stackexchange.com/] 
+A discord bot that allows you to execute [Quantum Circuits](https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.html), look up the [IBMQ Qiskit's Documentation](https://qiskit.org/documentation/), and search questions on the [Quantum Computing StackExchange](https://quantumcomputing.stackexchange.com/) 
+
+![](assets/qiskit-community.png)
+:two_hearts: Qiskit
+
+This project is not affiliated with IBM in any way. But I would like to thank Brian Ingmanson (Education Community Manager at IBM) for being so encouraging and supportive towards this little project!
 
 ## Installation
 
@@ -20,7 +25,7 @@ zsh deploy.sh
 ```
 ## Disclaimer
 
-Builds might fail on your machine. This is still under testing and there is a lot that needs to be fixed with the way the code is structured. Once everything is smooth, I will add docstrings and comments wherever neccessary. 
+Builds might fail on your machine. This is still under testing and there is a lot that needs to be fixed with the way the code is structured. Once everything is smooth, I will add docstrings and comments wherever neccessary. This was just a hobby project, but I do plan on extending it further. 
 
 ## Architecture of the sandbox (running untrusted code)
 ### Goal
