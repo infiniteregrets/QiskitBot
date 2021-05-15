@@ -25,6 +25,8 @@ Builds might fail on your machine. This is still under testing and there is a lo
 ## Architecture of the sandbox (running untrusted code)
 ### Goal
 Spawn a container per user, providing an isolated environment to run untrusted code. Save the state of the user using [CRIU](https://criu.org/Main_Page) (checkpoint and restore).
+![](assets/docker-podman.png)
+
 ### Nested Containers
 One of the main objectives of this project was to experiment with the idea of having containers inside of containers. Instead of mounting the unix socket and the spawning containers (the tradional way):
 ```
@@ -33,9 +35,10 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock ...
 I used podman inside of docker, which is a daemonless container engine used for developing, managing, and running OCI Containers. Podman is used with tools like Buildah and Skopeo, which not only makes managing images and containers easy but in my opinion much more powerful than docker!
 
 ### Initial Idea - Using NsJail With Podman Containers
-To use podman use podman inside docker you need to use the `--privileged` while running your container. This works just fine, but the problem arises when the capabilities of podman and docker don't match. This means you can't run privileged podman containers inside of a docker container as required by NsJail. 
+To use podman inside docker you need to use the `--privileged` flag while running your container. This works just fine, but the problem arises when the capabilities of podman and docker don't match. This means you can't run privileged podman containers inside of a docker container as required by NsJail. 
 `"CAP_PERFMON","CAP_BPF", "CAP_CHECKPOINT_RESTORE"` are not supported by docker. 
 See issue [#10282 on containers/podman](https://github.com/containers/podman/issues/10282)
+Eventually after a lot of experimentation, I dropped this idea. (refer to the Dockerfile in the root directory)
 
 ## Usage
 ```
