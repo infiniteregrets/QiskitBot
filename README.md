@@ -28,3 +28,10 @@ One of the main objectives of this project was to experiment with the idea of ha
 docker run -v /var/run/docker.sock:/var/run/docker.sock ...
 ```
 I used podman inside of docker, which is a daemonless container engine used for developing, managing, and running OCI Containers. Podman is used with tools like Buildah and Skopeo, which not only makes managing images and containers easy but in my opinion much more powerful than docker!
+
+### Usage
+![](assets/asciicircuit.png)
+![](assets/circuit.png)
+![](assets/docs.png)
+![](assets/plot.png)
+![](assets/stackexchange.png)
