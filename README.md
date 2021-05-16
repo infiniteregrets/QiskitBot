@@ -31,7 +31,7 @@ Builds might fail on your machine. This is still under testing and there is a lo
 ### Goal
 Spawn a container per user inside a docker container, providing an isolated environment to run untrusted code. Save the state of the user using [CRIU](https://criu.org/Main_Page) (checkpoint and restore).
 
-Checkpointing and restoring is easy with Podman:\
+Checkpointing and restoring is easy with Podman:
 ```
 podman container checkpoint <container_id>
 podman container restore <container_id>
