@@ -29,7 +29,15 @@ Builds might fail on your machine. This is still under testing and there is a lo
 
 ## Architecture of the sandbox (running untrusted code)
 ### Goal
-Spawn a container per user, providing an isolated environment to run untrusted code. Save the state of the user using [CRIU](https://criu.org/Main_Page) (checkpoint and restore).
+Spawn a container per user inside a docker container, providing an isolated environment to run untrusted code. Save the state of the user using [CRIU](https://criu.org/Main_Page) (checkpoint and restore).
+
+Checkpointing and restoring is easy with Podman:
+```
+podman container checkpoint <container_id>
+podman container restore <container_id>
+```
+As of now this feature is unimplemented, but methods for checkpoint and restore are available in `cogs/circuit.py`
+
 ![](assets/docker-podman.png)
 
 ### Nested Containers
@@ -63,6 +71,6 @@ Eventually after a lot of experimentation, I dropped this idea. (refer to the Do
 ```
 ![](assets/plot.png)
 ```
-<@Qiskit>query <search criteria> \`\`\` <codeblock> \`\`\`
+<@Qiskit>query <search criteria>
 ```
 ![](assets/stackexchange.png)
