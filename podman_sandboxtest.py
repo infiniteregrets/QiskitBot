@@ -50,7 +50,7 @@ class Sandbox:
         else:                         
             for i in range(3):   
                 try:         
-                    container = subprocess.run(f'docker run --name="{self.container_name}"  -i -t -d {image_id}',
+                    container = subprocess.run(f'podman run --name="{self.container_name}"  -i -t -d {image_id}',
                                                 capture_output = True, 
                                                 text = True,
                                                 check = True,
@@ -74,6 +74,6 @@ class Sandbox:
         print(dict(self.container_map))
 
     def kill_all(self):
-        subprocess.run('docker kill $(docker ps -q)', shell = True)
+        subprocess.run('podman kill $(podman ps -q)', shell = True)
 
 
