@@ -1,0 +1,3 @@
+TOKEN = ''
+PREFIXES = ['!?']
+BLACKLIST = []
