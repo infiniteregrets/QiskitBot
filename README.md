@@ -7,7 +7,8 @@ A discord bot that allows you to execute [Quantum Circuits](https://qiskit.org/d
 
 This project is not affiliated with IBM in any way. But I would like to thank Brian Ingmanson (Education Community Manager at IBM) for being so encouraging and supportive towards this little project!
 
-## Installation
+## Installation 
+ - **Podman Version**
 
 Using docker-compose:
 
@@ -23,11 +24,21 @@ On MacOs with deploy.sh
 ```
 zsh deploy.sh
 ```
+ - **Python Docker SDK version**
+```
+python3 -B . 
+```
+Make sure you have Docker [installed](https://www.docker.com/products/docker-desktop) and running on your machine.
+
 ## Disclaimer
 
 Builds might fail on your machine. This is still under testing and there is a lot that needs to be fixed with the way the code is structured. Once everything is smooth, I will add docstrings and comments wherever neccessary. This was just a hobby project, but I do plan on extending it further. 
 
-## Architecture of the sandbox (running untrusted code)
+## Versions
+There are two versions that I have been working on. One that uses the [Python Docker SDK](https://docker-py.readthedocs.io/en/stable/) and one that launches containers using Podman inside a container controlled by Docker. 
+They Python Docker SDK version is much faster when it comes to rendering simple circuits, so that is what you should be probably looking at. 
+
+## Architecture of the sandbox (running untrusted code) [Podman]
 ### Goal
 Spawn a container per user inside a container launched by docker, providing an isolated environment to run untrusted code. Save the state of the user using [CRIU](https://criu.org/Main_Page) (checkpoint and restore).
 
