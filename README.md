@@ -69,6 +69,7 @@ Eventually after a lot of experimentation, I dropped this idea. (refer to the Do
 <@Qiskit>asciicircuit \`\`\` <codeblock> \`\`\`
 ```
 ![](assets/asciicircuit.png)
+![](assets/new-circ.png)
 ```
 <@Qiskit>mplcircuit \`\`\` <codeblock> \`\`\`
 ```
@@ -77,6 +78,7 @@ Eventually after a lot of experimentation, I dropped this idea. (refer to the Do
 <@Qiskit>docs <searchitem> 
 ```
 ![](assets/docs.png)
+![](assets/new-docs.png)
 ```
 <@Qiskit>mplplot  \`\`\` <codeblock> \`\`\`
 ```
