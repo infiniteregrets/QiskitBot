@@ -36,7 +36,7 @@ Builds might fail on your machine. This is still under testing and there is a lo
 
 ## Versions
 There are two versions that I have been working on. One that uses the [Docker Python SDK](https://docker-py.readthedocs.io/en/stable/) and one that launches containers using Podman inside a container controlled by Docker. 
-They Docker Python SDK version is much faster when it comes to rendering simple circuits, so that is what you should be probably looking at. 
+The Docker Python SDK version is much faster when it comes to rendering simple circuits, so that is what you should be probably looking at. 
 
 ## Architecture of the sandbox (running untrusted code) [Podman]
 ### Goal
